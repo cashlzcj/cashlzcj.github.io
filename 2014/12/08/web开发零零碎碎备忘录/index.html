@@ -3,14 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>iOS零零碎碎备忘录</title>
+  <title>web开发零零碎碎备忘录 | iOS零零碎碎备忘录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="og:type" content="blog">
-<meta name="og:title">
-<meta name="og:url" content="https://github.com/cashlzcj/cashlzcj.github.io.git/">
+<meta name="og:title" content="web开发零零碎碎备忘录">
+<meta name="og:url" content="https://github.com/cashlzcj/cashlzcj.github.io.git/2014/12/08/web开发零零碎碎备忘录/">
 <meta name="og:image">
 <meta name="og:site_name" content="iOS零零碎碎备忘录">
-<meta name="og:description">
+<meta name="og:description" content="PHP笔记
+1、常用工具&amp;常用库
+(1)firebug
+firebug是firefox浏览器下面的一个插件(safari上面也有Firebug Lite for Safari)，可以用来调试Html、CSS、JS等。
+(2)livehttpheaders
+捕捉Httpheader的利器。
+(3)YUI、JQuery等UI库
+可以解决一些浏览器兼容问题。Dojo、ExtJS、JQuery、M">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="iOS零零碎碎备忘录" type="application/atom+xml">
@@ -57,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-web开发零零碎碎备忘录" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-web开发零零碎碎备忘录" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/12/08/web开发零零碎碎备忘录/" class="article-date">
   <time datetime="2014-12-07T16:09:59.000Z" itemprop="datePublished">Dec 8 2014</time>
@@ -72,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/08/web开发零零碎碎备忘录/">web开发零零碎碎备忘录</a>
+    <h1 class="article-title" itemprop="name">
+      web开发零零碎碎备忘录
     </h1>
   
 
@@ -170,120 +175,20 @@ ini_set(“display_errors”, <span class="keyword">TRUE</span>);
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-ios零零碎碎备忘录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/12/05/ios零零碎碎备忘录/" class="article-date">
-  <time datetime="2014-12-05T14:22:49.000Z" itemprop="datePublished">Dec 5 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/05/ios零零碎碎备忘录/">iOS零零碎碎备忘录</a>
-    </h1>
+    <a href="/2014/12/05/ios零零碎碎备忘录/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iOS零零碎碎备忘录</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="iOS零零碎碎备忘录">iOS零零碎碎备忘录</h2>
-<h3 id="1-CGRectInset">1.CGRectInset</h3>
-<pre><code><span class="built_in">CGRect</span> CGRectInset（
-<span class="built_in">CGRect</span> rect, 
-<span class="built_in">CGFloat</span> dx, 
-<span class="built_in">CGFloat</span> dy）
-</code></pre><p>该结构体可以表示已rect为中心，结合dx,dy形成的一个矩形CGRect区域</p>
-<h3 id="2-注释">2.注释</h3>
-<p>这样格式的注释 调用时将被自动加入到提示中<br>附javadoc <a href="http://en.wikipedia.org/wiki/Javadoc" target="_blank"> http://en.wikipedia.org/wiki/Javadoc</a>  </p>
-<h3 id="3-@import写法（Modules）">3.@import写法（Modules）</h3>
-<p> @import MessageUI; 等价于 #import <MessageUI/MessageUI.h><br> @import MessageUI.MFMailComposeViewController; 等价于 #import <MessageUI/MFMailComposeViewController.h><br> 如果使用的是iOS7或者MacOS10.9的SDK，在Build Settings中将Enable Modules(C and Objective-C)打开，然后保持原来的#import写法就行了。是的，不需要任何代码上的改变，编译器会在编译的时候自动地把可能的地方换成Modules的写法去编译的。  </p>
-<h3 id="4-删除线">4.删除线</h3>
-<p>删除线 可以用attribute  NSStrikethroughStyleAttributeName，再也不用自己画了  </p>
-<h3 id="5-修改图片颜色">5.修改图片颜色</h3>
-<p> <code>- (void)drawInRect:(CGRect)rect blendMode:(CGBlendMode)blendMode alpha:(CGFloat)alpha</code>;修改图片颜色   </p>
-<h3 id="6-Objc与C/C++混编注意">6.Objc与C/C++混编注意</h3>
-<p>在做混合编译之前一定要把编译器的Compile Sources As选项改为Objective C++。  </p>
-<h3 id="7-一个ARC中引用申明的错误">7.一个ARC中引用申明的错误</h3>
-<p>Receiver type ‘X’ for instance message is a forward declaration<br>这往往是引用的问题。ARC要求完整的前向引用，也就是说在MRC时代可能只需要在.h中申明@class就可以，但是在ARC中如果调用某个子类中未覆盖的父类中的方法的话，必须对父类.h引用，否则无法编译。  </p>
-<h3 id="8-iOS8_NSUserDefaults模拟器中的清除">8.iOS8 NSUserDefaults模拟器中的清除</h3>
-<p>Macintosh HD ▸ Users ▸ username ▸ Library ▸ Developer ▸ CoreSimulator ▸ Devices ▸ SIMULATORUUID ▸ data ▸ Library ▸ Preferences ▸ YourApplicationBundleID.plist<br>删除这个路径下的plist就可以清除了。  </p>
-<h3 id="9-获取中文拼音CFStringTransform">9.获取中文拼音CFStringTransform</h3>
-<p>例子<br>`</p>
-<ul>
-<li>(NSString<em>)getSpellForWord:(NSString</em>)word<br>{<br>  NSMutableString <em>spell = [NSMutableString stringWithString:word];<br>  CFRange range = CFRangeMake(0, spell.length);<br>  CFStringTransform((CFMutableStringRef)spell, &amp;range, kCFStringTransformMandarinLatin, NO);<br>  CFStringTransform((CFMutableStringRef)spell, &amp;range, kCFStringTransformStripCombiningMarks, NO);<br>  spell = (NSMutableString</em>)[spell trim];<br>  return spell;<br>}`  </li>
-</ul>
-<h3 id="10-GCD定时器">10.GCD定时器</h3>
-<p><code>__block int timeout = 2; //倒计时时间
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-     self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
-    dispatch_source_set_timer(self.timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
-    dispatch_source_set_event_handler(self.timer, ^{
-        if(timeout&lt;=0){
-            dispatch_source_cancel(self.timer);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                //设置界面的按钮显示 根据自己需求设置
-                [self hiddenView];
-            });
-        }else{
-            timeout--;
-        }
-    });
-    dispatch_resume(self.timer);</code>   </p>
-<h3 id="11-解决xcode6模拟器启动Bug">11.解决xcode6模拟器启动Bug</h3>
-<ul>
-<li>Open the simulator via Xcode -&gt; Open Developer Tool -&gt; iOS simulator (even if it can’t launch, the app will be open).<ul>
-<li>With the simulator app open, go to Hardware -&gt; Device -&gt; Manage Devices.</li>
-<li>Add any missing simulators with the plus button (all of mine were missing for some reason).  </li>
-</ul>
-</li>
-</ul>
-<h3 id="12-ios7滑动返回手势_及是否取消判断interactivePopGestureRecognizer">12.ios7滑动返回手势 及是否取消判断interactivePopGestureRecognizer</h3>
-<p>`</p>
-<ul>
-<li>(void)navigationController:(UINavigationController <em>)navigationController willShowViewController:(UIViewController </em>)viewController animated:(BOOL)animated<br>{<pre><code>  <span class="keyword">id</span>&lt;UIViewControllerTransitionCoordinator]] tc = navigationController<span class="variable">.topViewController</span><span class="variable">.transitionCoordinator</span>;
-  [tc notifyWhenInteractionEndsUsingBlock:^(<span class="keyword">id</span>&lt;UIViewControllerTransitionCoordinatorContext]] context) {
-      <span class="built_in">NSLog</span>(@<span class="string">"7: %i"</span>, [context isCancelled]);
-</code></pre>  }];<br>}`  </li>
-</ul>
-<h3 id="13-设置空间全局颜色appearance_proxy">13.设置空间全局颜色appearance proxy</h3>
-<p><a href="http://blog.csdn.net/huifeidexin_1/article/details/11890119" target="_blank">http://blog.csdn.net/huifeidexin_1/article/details/11890119</a>  </p>
-<h3 id="14-autolayout_scrollview刺头">14.autolayout scrollview刺头</h3>
-<p><a href="http://andyyou.logdown.com/posts/218193-ios-use-uiscrollview-autolayout" target="_blank">http://andyyou.logdown.com/posts/218193-ios-use-uiscrollview-autolayout</a><br><a href="http://blog.csdn.net/meegomeego/article/details/39995477" target="_blank">http://blog.csdn.net/meegomeego/article/details/39995477</a>  </p>
-<h3 id="15-storyboard详解">15.storyboard详解</h3>
-<p><a href="http://www.cocoachina.com/ios/20141124/10301.html" target="_blank">http://www.cocoachina.com/ios/20141124/10301.html</a>  </p>
-<h3 id="16-基于cocospod创建静态库">16.基于cocospod创建静态库</h3>
-<p><a href="http://www.cnblogs.com/brycezhang/p/4117180.html" target="_blank">http://www.cnblogs.com/brycezhang/p/4117180.html</a>  </p>
-<h3 id="17-ios8适配">17.ios8适配</h3>
-<p>Launch Screen.xib 只能在iOS7.1，低于该版本需要提供两套启动图<br><a href="http://www.jianshu.com/p/22ec8d179d2e" target="_blank">http://www.jianshu.com/p/22ec8d179d2e</a>  </p>
-<h3 id="18-崩溃信息收集">18.崩溃信息收集</h3>
-<p>UncaughtExceptionHandler  </p>
-<h3 id="19-@compatibility_alias">19.@compatibility_alias</h3>
-<p>给类一个别名</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://github.com/cashlzcj/cashlzcj.github.io.git/2014/12/05/ios零零碎碎备忘录/" data-id="487n1bcyg8j9c4ef" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
 
-
-  
-  
 </section>
         
           <aside id="sidebar">
